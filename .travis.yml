@@ -20,7 +20,6 @@ before_install:
 - sfdx plugins --core
 #Authorizes Dev Hub
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername --setalias HubOrg
-
 script:
 #Authorize target deployment org
 - sfdx force:auth:jwt:grant --instanceurl https://login.salesforce.com  --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setalias HubOrg
